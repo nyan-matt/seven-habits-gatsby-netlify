@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
-
+import { FaHome } from 'react-icons/fa'
 
 class MobileNav extends React.Component {
   constructor(props) {
@@ -59,7 +59,7 @@ class MobileNav extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-start is-hidden-desktop">
-              <Link className="navbar-item" activeClassName="active" to="/">/ - Home</Link>
+              <Link className="navbar-item" activeClassName="active" to="/"><FaHome />&nbsp; Home</Link>
               {posts &&
               posts.map((post, index) => (    
                 <Link key={index} className="navbar-item" activeClassName="is-active" to={post.fields.slug}>{`0${index + 1} - ${post.frontmatter.title}`}</Link>
