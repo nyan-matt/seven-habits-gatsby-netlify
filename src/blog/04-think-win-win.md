@@ -4,11 +4,7 @@ habit: '04'
 title: Think win-win
 description: Work effectively with others to achieve optimal results.
 date: 2017-01-04T15:04:10.000Z
-featuredpost: false
-featuredimage: /img/chemex.jpg
 tags:
-  - brewing
-  - chemex
 ---
 
 Think Win-Win isn't about being nice, nor is it a quick-fix technique. It is a character-based code for human interaction and collaboration. 
