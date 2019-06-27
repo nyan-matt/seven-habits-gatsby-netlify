@@ -62,7 +62,14 @@ class MobileNav extends React.Component {
               <Link className="navbar-item" activeClassName="is-active" to="/"><FaHome />&nbsp; Home</Link>
               {posts &&
               posts.map((post, index) => (    
-                <Link key={index} className="navbar-item" activeClassName="is-active" to={post.fields.slug}>{`0${index + 1} - ${post.frontmatter.title}`}</Link>
+                <Link key={index} 
+                  className="navbar-item" 
+                  activeClassName="is-active" 
+                  to={post.fields.slug}
+                  onClick={() => this.toggleHamburger()}
+                >
+                    {`0${index + 1} - ${post.frontmatter.title}`}
+                </Link>
               ))}
             </div>
           </div>
