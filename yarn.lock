@@ -4838,6 +4838,14 @@ gatsby-plugin-layout@^1.0.15:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
+gatsby-plugin-manifest@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.2.0.tgz#e16d39bd415026594465e1763cc2abd43729a7d1"
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    semver "^5.6.0"
+    sharp "^0.22.1"
+
 gatsby-plugin-netlify-cms@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cms/-/gatsby-plugin-netlify-cms-4.0.1.tgz#66b4eceda6655041c6b9aa4759109f2d8e7e1295"

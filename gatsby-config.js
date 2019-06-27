@@ -10,6 +10,18 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `7 Habits`,
+        short_name: `7 Habits`,
+        start_url: `/`,
+        background_color: `#333E48`,
+        theme_color: `#5BB75B`,
+        display: `standalone`,
+        icon: `${__dirname}/src/img/icon.png`,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-layout',
       options: {
         component: require.resolve(`${__dirname}/src/components/Layout.js`),
