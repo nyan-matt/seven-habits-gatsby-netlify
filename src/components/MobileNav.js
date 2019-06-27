@@ -59,7 +59,14 @@ class MobileNav extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-start is-hidden-desktop">
-              <Link className="navbar-item" activeClassName="is-active" to="/"><FaHome />&nbsp; Home</Link>
+              <Link 
+                className="navbar-item" 
+                activeClassName="is-active" 
+                to="/"
+                onClick={() => this.toggleHamburger()}
+              >
+                <FaHome />&nbsp; Home
+              </Link>
               {posts &&
               posts.map((post, index) => (    
                 <Link key={index} 
