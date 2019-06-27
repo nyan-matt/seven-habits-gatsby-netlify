@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: habit-post
 habit: '06'
 title: Synergize
 description: Innovate and problem solve with those who have a different point of view.

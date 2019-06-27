@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: habit-post
 habit: '04'
 title: Think win-win
 description: Work effectively with others to achieve optimal results.

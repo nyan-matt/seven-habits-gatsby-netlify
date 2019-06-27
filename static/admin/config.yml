@@ -8,8 +8,8 @@ public_folder: /img
 collections:
   - name: "blog"
     label: "Blog"
-    folder: "src/blog"
-    create: false
+    folder: "src/pages/blog"
+    create: true
     slug: "{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
@@ -19,7 +19,19 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
-
+  - name: "habits"
+    label: "Habits"
+    folder: "src/habits"
+    create: false
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "habit-post"}
+      - {label: "Habit Number", name: "habit", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list"}
   - name: "pages"
     label: "Pages"
     files:

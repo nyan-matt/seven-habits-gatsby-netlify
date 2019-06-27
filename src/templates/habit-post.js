@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Content, { HTMLContent } from '../components/Content'
+import Pagination from '../components/Pagination';
 
-export const BlogPostTemplate = ({
+export const HabitPostTemplate = ({
   content,
   contentComponent,
   description,
@@ -25,13 +26,14 @@ export const BlogPostTemplate = ({
           <div className="page-content size-4 ">
             <PostContent content={content} />
           </div>
+          <Pagination />
         </div>
       </div>
     </section>
   )
 }
 
-BlogPostTemplate.propTypes = {
+HabitPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
@@ -40,12 +42,12 @@ BlogPostTemplate.propTypes = {
   helmet: PropTypes.object
 }
 
-const BlogPost = ({ data, location }) => {
+const HabitPost = ({ data, location }) => {
   const { markdownRemark: post } = data
 
   return (
     
-      <BlogPostTemplate
+      <HabitPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
@@ -66,16 +68,16 @@ const BlogPost = ({ data, location }) => {
   )
 }
 
-BlogPost.propTypes = {
+HabitPost.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
 }
 
-export default BlogPost
+export default HabitPost
 
 export const pageQuery = graphql`
-  query BlogPostByID($id: String!) {
+  query HabitPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html

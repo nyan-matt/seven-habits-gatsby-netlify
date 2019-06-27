@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: habit-post
 habit: '03'
 title: Put first things first
 description: Execute on the most important priorities

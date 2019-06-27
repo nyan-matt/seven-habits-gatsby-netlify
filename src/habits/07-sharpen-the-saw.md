@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: habit-post
 habit: '07'
 title: Sharpen the saw
 description: Seek continuous improvement and renewal professionally and personally.

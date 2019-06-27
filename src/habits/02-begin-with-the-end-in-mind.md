@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: habit-post
 habit: '02'
 title: Begin with the end in mind
 description: Focus time and energy on things that can be controlled.

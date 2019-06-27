@@ -98,7 +98,7 @@ export default () => (
   <StaticQuery
     query={graphql`
       query MobileNavQuery {
-        allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "blog-post"}}}, sort: {fields: fields___slug}) {
+        allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "habit-post"}}}, sort: {fields: fields___slug}) {
             nodes {
               fields {
                 slug

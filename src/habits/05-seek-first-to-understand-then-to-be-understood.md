@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: habit-post
 habit: '05'
 title: Seek first to understand, then to be understood
 description: Communicate effectively at all levels of the organization.
