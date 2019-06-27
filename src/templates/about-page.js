@@ -7,15 +7,17 @@ export const AboutPageTemplate = ({ title, description, content, contentComponen
   const PageContent = contentComponent || Content
 
   return (
-    <div className="columns is-mobile is-centered">
-      <div className="column is-8-desktop is-10-tablet is-10-mobile">
-        <h2 className="section-heading">{title}</h2>
-        <h3 className="section-heading is-size-3">{description}</h3>
-        <div className="page-content size-4 ">
-          <PageContent content={content} />
+    <section className="section">
+      <div className="columns is-mobile is-centered">
+        <div className="column is-8-desktop is-10-tablet is-10-mobile">
+          <h2 className="section-heading">{title}</h2>
+          <h3 className="section-heading is-size-3">{description}</h3>
+          <div className="page-content size-4 ">
+            <PageContent content={content} />
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

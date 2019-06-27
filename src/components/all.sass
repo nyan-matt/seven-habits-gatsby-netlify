@@ -18,6 +18,8 @@ $pagination-current-border-color: $dark-blue
 $pagination-hover-color: #EEEEEE
 $pagination-focus-border-color: $green
 
+$section-padding: 0
+
 $primary: $green
 $black: #2b2523
 
@@ -27,6 +29,9 @@ $body-color: $white
 .navbar-burger 
   margin-left: inherit !important
 
+html
+  overscroll-behavior-y: none
+  overscroll-behavior-x: none
 
 h1.section-heading 
   font-size: 9rem
@@ -51,6 +56,7 @@ body
   background-position-x: right
   background-attachment: fixed
   height: 100vh
+  overflow-x: hidden
 
 
 @media (max-width: 420px)

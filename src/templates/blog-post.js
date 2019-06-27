@@ -17,17 +17,19 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <div className="columns is-mobile is-centered">
-    <div className="column is-8-desktop is-10-tablet is-10-mobile">
-      <h1 className="section-heading">{habit}</h1>
-      <h2 className="section-heading">{title}</h2>
-      <h3 className="section-heading is-size-3">{description}</h3>
-      <div className="page-content size-4 ">
-        <PostContent content={content} />
+    <section className="section">
+      <div className="columns is-mobile is-centered">
+        <div className="column is-8-desktop is-10-tablet is-10-mobile">
+          <h1 className="section-heading">{habit}</h1>
+          <h2 className="section-heading">{title}</h2>
+          <h3 className="section-heading is-size-3">{description}</h3>
+          <div className="page-content size-4 ">
+            <PostContent content={content} />
+          </div>
+          <Pagination />
+        </div>
       </div>
-      <Pagination />
-    </div>
-  </div>
+    </section>
   )
 }
 

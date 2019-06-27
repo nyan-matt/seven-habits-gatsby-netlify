@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Helmet from 'react-helmet'
 import './all.sass'
 import useSiteMetadata from './SiteMetadata'
@@ -10,7 +10,7 @@ import MobileNav from './MobileNav';
 const Layout = ({ children, location }) => {
   const { title, description } = useSiteMetadata()
   return (
-    <div>
+    <Fragment>
       <Helmet bodyAttributes={{
         class: 'body-bg'
       }}>
@@ -55,7 +55,7 @@ const Layout = ({ children, location }) => {
       <Transition location={location}>
          {children}
       </Transition>
-    </div>
+    </Fragment>
   )
 }
 
