@@ -36,7 +36,7 @@ class MobileNav extends React.Component {
     const { nodes: posts } = data.allMarkdownRemark
     return (
       <nav
-        className="navbar is-transparent is-fixed-top"
+        className="navbar is-transparent"
         role="navigation"
         aria-label="main-navigation"
       >
