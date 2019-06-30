@@ -15,9 +15,6 @@ const Layout = ({ children, location }) => {
         bodyAttributes={{
           class: 'body-bg'
         }}
-        htmlAttributes={{
-          class: 'has-navbar-fixed-top'
-        }}
       >
         <html lang="en" />
         <title>{title}</title>
