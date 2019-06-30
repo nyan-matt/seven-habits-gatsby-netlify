@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
-import { FaHome }  from 'react-icons/fa'
+import { FaHome, FaInfoCircle }  from 'react-icons/fa'
 
 class SideNav extends React.Component {
   render() {
@@ -15,6 +15,9 @@ class SideNav extends React.Component {
             posts.map((post, index) => (    
               <Link key={index} activeClassName="active" title={post.frontmatter.title} to={post.fields.slug}>{`0${index + 1}`}</Link>
             ))}
+        <Link activeClassName="active" to="/about" style={{position: 'absolute', bottom:'0', margin: '8px 18px'}}>
+          <FaInfoCircle  />
+        </Link>
           </div>
       </div>
     )

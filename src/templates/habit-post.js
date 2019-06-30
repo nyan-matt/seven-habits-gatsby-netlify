@@ -4,6 +4,8 @@ import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Content, { HTMLContent } from '../components/Content'
 import Pagination from '../components/Pagination';
+import { Fragment } from 'react';
+import { Link } from 'gatsby'
 
 export const HabitPostTemplate = ({
   content,
@@ -13,6 +15,7 @@ export const HabitPostTemplate = ({
   title,
   habit,
   helmet,
+  related
 }) => {
   const PostContent = contentComponent || Content
 
@@ -27,6 +30,22 @@ export const HabitPostTemplate = ({
             <PostContent content={content} />
           </div>
           <Pagination />
+          { related && related.length > 0 ?
+            <Fragment>
+            <h3 className="related">Habit {habit} in action...</h3>
+            
+              {related.map((item, index) => 
+                <div className="column related" key={index}>
+                  <h4><Link to={item.node.fields.slug}>{item.node.frontmatter.title}</Link></h4>
+                  <h5>{item.node.frontmatter.description}</h5>
+                  <PostContent className="" content={item.node.excerpt} />
+                </div>
+                )}
+            
+            </Fragment> 
+          : 
+          ''
+          }
         </div>
       </div>
     </section>
@@ -39,11 +58,12 @@ HabitPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   habit: PropTypes.string,
-  helmet: PropTypes.object
+  helmet: PropTypes.object,
+  related: PropTypes.array
 }
 
 const HabitPost = ({ data, location }) => {
-  const { markdownRemark: post } = data
+  const { markdownRemark: post, allMarkdownRemark: related } = data
 
   return (
     
@@ -63,6 +83,7 @@ const HabitPost = ({ data, location }) => {
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         habit={post.frontmatter.habit}
+        related={related.edges}
       />
     
   )
@@ -71,13 +92,14 @@ const HabitPost = ({ data, location }) => {
 HabitPost.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
+    allMarkdownRemark: PropTypes.object
   }),
 }
 
 export default HabitPost
 
 export const pageQuery = graphql`
-  query HabitPostByID($id: String!) {
+  query HabitPostByID($id: String!, $habit: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html
@@ -87,6 +109,21 @@ export const pageQuery = graphql`
         habit
         description
         tags
+      }
+    }
+    allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "blog-post"}, habit: {eq: $habit}}}) {
+      edges {
+        node {
+          excerpt(pruneLength: 400)
+          html
+          frontmatter {
+            title
+            description
+          }
+          fields {
+            slug
+          }
+        }
       }
     }
   }

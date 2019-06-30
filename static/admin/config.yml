@@ -7,18 +7,27 @@ public_folder: /img
 
 collections:
   - name: "blog"
-    label: "Blog"
+    label: "Habits in Action (Blog)"
     folder: "src/pages/blog"
     create: true
     slug: "{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-      - {label: "Habit Number", name: "habit", widget: "string"}
+      - label: "Habit Number"
+        name: "habit"
+        widget: "select"
+        options: 
+          - {label: "Be proactive", value: "01"}
+          - {label: "Begin with the end in mind", value: "02"}
+          - {label: "First things first", value: "03"}
+          - {label: "Think win-win", value: "04"}
+          - {label: "Seek first to understand, then to be understood", value: "05"}
+          - {label: "Synergize", value: "06"}
+          - {label: "Sharpen the saw", value: "07"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
   - name: "habits"
     label: "Habits"
     folder: "src/habits"

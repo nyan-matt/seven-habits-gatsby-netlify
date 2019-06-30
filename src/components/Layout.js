@@ -11,9 +11,14 @@ const Layout = ({ children, location }) => {
   const { title, description } = useSiteMetadata()
   return (
     <Fragment>
-      <Helmet bodyAttributes={{
-        class: 'body-bg'
-      }}>
+      <Helmet 
+        bodyAttributes={{
+          class: 'body-bg'
+        }}
+        htmlAttributes={{
+          class: 'has-navbar-fixed-top'
+        }}
+      >
         <html lang="en" />
         <title>{title}</title>
         <meta name="description" content={description} />

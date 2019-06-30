@@ -18,6 +18,7 @@ exports.createPages = ({ actions, graphql }) => {
             frontmatter {
               tags
               templateKey
+              habit
             }
           }
         }
@@ -30,9 +31,10 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     const posts = result.data.allMarkdownRemark.edges
-
+    console.log(JSON.stringify(posts))
     posts.forEach(edge => {
       const id = edge.node.id
+      const habit = edge.node.frontmatter.habit
       createPage({
         path: edge.node.fields.slug,
         tags: edge.node.frontmatter.tags,
@@ -42,6 +44,7 @@ exports.createPages = ({ actions, graphql }) => {
         // additional data can be passed via context
         context: {
           id,
+          habit
         },
       })
     })

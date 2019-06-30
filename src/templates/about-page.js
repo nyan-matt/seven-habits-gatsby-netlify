@@ -7,7 +7,7 @@ export const AboutPageTemplate = ({ title, description, content, contentComponen
   const PageContent = contentComponent || Content
 
   return (
-    <section className="section">
+    <section className="section" style={{'marginTop':'220px'}}>
       <div className="columns is-mobile is-centered">
         <div className="column is-8-desktop is-10-tablet is-10-mobile">
           <h2 className="section-heading">{title}</h2>

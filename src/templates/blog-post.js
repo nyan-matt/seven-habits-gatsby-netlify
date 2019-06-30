@@ -8,7 +8,6 @@ export const BlogPostTemplate = ({
   content,
   contentComponent,
   description,
-  tags,
   title,
   habit,
   helmet,
@@ -19,7 +18,7 @@ export const BlogPostTemplate = ({
     <section className="section">
       <div className="columns is-mobile is-centered">
         <div className="column is-8-desktop is-10-tablet is-10-mobile">
-          <h1 className="section-heading">{habit}</h1>
+          <h1 className="section-heading">&nbsp;</h1>
           <h2 className="section-heading">{title}</h2>
           <h3 className="section-heading is-size-3">{description}</h3>
           <div className="page-content size-4 ">
@@ -58,7 +57,6 @@ const BlogPost = ({ data, location }) => {
             />
           </Helmet>
         }
-        tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         habit={post.frontmatter.habit}
       />
@@ -84,7 +82,6 @@ export const pageQuery = graphql`
         title
         habit
         description
-        tags
       }
     }
   }

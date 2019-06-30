@@ -1,3 +1,3 @@
 exports.shouldUpdateScroll = () => {
-    return false;
+    return true;
 };
