@@ -52,7 +52,6 @@ const Layout = ({ children, location }) => {
       </Helmet>
         
         <SideNav />
-        {/* <Navbar /> */}
         <MobileNav />
       <Transition location={location}>
          {children}
