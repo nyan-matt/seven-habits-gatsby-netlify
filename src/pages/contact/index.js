@@ -34,11 +34,11 @@ export default class Index extends React.Component {
 
   render() {
     return (
-      <div>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <h1>Contact</h1>
+      <section className="section" style={{'marginTop':'220px'}}>
+      <div className="columns is-mobile is-centered">
+        <div className="column is-8-desktop is-10-tablet is-10-mobile">
+          <h2 className="section-heading">Contact</h2>
+          <h3 className="section-heading is-size-3">Comments, questions, or issues? </h3>
               <form
                 name="contact"
                 method="post"
@@ -100,15 +100,15 @@ export default class Index extends React.Component {
                   </div>
                 </div>
                 <div className="field">
-                  <button className="button is-link" type="submit">
-                    Send
+                  <button className="button is-primary is-fullwidth " style={{marginTop: '20px'}} type="submit">
+                    Send Message
                   </button>
                 </div>
               </form>
             </div>
           </div>
         </section>
-      </div>
+      
     )
   }
 }

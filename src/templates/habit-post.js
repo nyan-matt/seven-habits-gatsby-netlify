@@ -32,8 +32,7 @@ export const HabitPostTemplate = ({
           <Pagination />
           { related && related.length > 0 ?
             <Fragment>
-            <h3 className="related">Habit {habit} in action...</h3>
-            
+              <h3 className="related">Habit {habit} in action...</h3>
               {related.map((item, index) => 
                 <div className="column related" key={index}>
                   <h4><Link to={item.node.fields.slug}>{item.node.frontmatter.title}</Link></h4>
@@ -41,11 +40,13 @@ export const HabitPostTemplate = ({
                   <PostContent className="" content={item.node.excerpt} />
                 </div>
                 )}
-            
             </Fragment> 
           : 
           ''
           }
+          <p className="contact-text">
+            Have a story or example of habit {habit} you would like to add? Let me know by completing the <Link to="/contact">form</Link> for access to the CMS.
+          </p>
         </div>
       </div>
     </section>

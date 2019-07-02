@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
-import { FaHome } from 'react-icons/fa'
+import { FaHome, FaInfoCircle } from 'react-icons/fa'
 
 class MobileNav extends React.Component {
   constructor(props) {
@@ -65,8 +65,9 @@ class MobileNav extends React.Component {
                 to="/"
                 onClick={() => this.toggleHamburger()}
               >
-                <FaHome />&nbsp; Home
+                <FaHome />&nbsp; Home - 7 Habits
               </Link>
+
               {posts &&
               posts.map((post, index) => (    
                 <Link key={index} 
@@ -78,6 +79,14 @@ class MobileNav extends React.Component {
                     {`0${index + 1} - ${post.frontmatter.title}`}
                 </Link>
               ))}
+              <Link 
+                className="navbar-item" 
+                activeClassName="is-active" 
+                to="/about"
+                onClick={() => this.toggleHamburger()}
+              >
+                <FaInfoCircle />&nbsp; About
+              </Link>
             </div>
           </div>
         </div>

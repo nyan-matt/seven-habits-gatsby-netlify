@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 habit: '07'
-title: Atomic Habits
+title: Book - Atomic Habits
 description: This book is a good companion to Habit 7
 date: 2017-01-04T15:04:10.000Z
 tags:
@@ -11,7 +11,6 @@ I recently read Atomic Habits by James Clear which makes the case for (and provi
 
 [Atomic Habits](https://jamesclear.com/atomic-habits)
 
-
-<div class="video-container">
-  <iframe width="640" height="360" src="//www.youtube.com/embed/i1Xm_MA2NwA" frameborder="0" allowfullscreen></iframe>
+<div>
+  <iframe style="width:100%; height:100%; position: absolute; top: 0" class="video" src="https://www.youtube.com/embed/i1Xm_MA2NwA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>

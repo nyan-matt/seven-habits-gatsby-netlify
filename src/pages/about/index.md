@@ -9,17 +9,21 @@ This small proof-of-concept is meant to be a quick reference / inspiration for l
 
 This project embraces the "JAMstack" which is an umbrella term that refers to using Javascript, APIs, & Markup to create highly performant, secure, cacheable sites that typically use static generation to create the site, its routes, assets, data, etc., during a build step rather than a dynamic site making those calls at run time. Coupled with a good CI/CD process, it fills a niche for smaller scale projects such as marketing sites, blogs, documentation, etc.
 
-For more information, see https://jamstack.org/.
+For more information, see https://jamstack.org/
 
 While there are various technologies and tools available, this project is using:
 
 1. React
 2. Gatsby 
 3. GraphQL
-4. Netlify (Buuld / Deploy + CMS) 
+4. Netlify (Build / Deploy + CMS) 
 5. PWA 
 
 https://github.com/nyan-matt/seven-habits-gatsby-netlify
+
+Because content is usually co-located with source code in a git repository, it could be a challenge to get content authors onboarded with understanding git workflows and commands, however, there are tools like Netlify CMS that can be integrated  into your repository and expose content for editing / creation through a simple web interface.
+
+For more information, see https://www.netlifycms.org/ 
 
 Netlify CMS backend
 
