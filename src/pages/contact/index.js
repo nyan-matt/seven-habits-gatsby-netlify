@@ -17,6 +17,11 @@ export default class Index extends React.Component {
     this.setState({ [e.target.name]: e.target.value })
   }
 
+  vibrate = e => {
+    navigator.vibrate(200)
+    console.log('submit button click')
+  }
+
   handleSubmit = e => {
     e.preventDefault()
     const form = e.target
@@ -100,7 +105,7 @@ export default class Index extends React.Component {
                   </div>
                 </div>
                 <div className="field">
-                  <button className="button is-primary is-fullwidth " style={{marginTop: '20px'}} type="submit">
+                  <button className="button is-primary is-fullwidth " style={{marginTop: '20px'}} onClick={this.vibrate} type="submit">
                     Send Message
                   </button>
                 </div>
