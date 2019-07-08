@@ -10,13 +10,13 @@ class SideNav extends React.Component {
     return (
       <div className="side-nav">
       <div className="nav-items">
-        <Link activeClassName="active" to="/"><FaHome /></Link>
+        <Link activeClassName="active" to="/"><span className="is-sr-only">Home</span><FaHome /></Link>
             {posts &&
             posts.map((post, index) => (    
               <Link key={index} activeClassName="active" title={post.frontmatter.title} to={post.fields.slug}>{`0${index + 1}`}</Link>
             ))}
         <Link activeClassName="active" to="/about" style={{position: 'absolute', bottom:'0', margin: '8px 18px'}}>
-          <FaInfoCircle  />
+          <span className="is-sr-only">Home</span><FaInfoCircle  />
         </Link>
           </div>
       </div>
