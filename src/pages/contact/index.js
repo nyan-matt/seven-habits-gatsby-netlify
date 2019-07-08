@@ -19,7 +19,7 @@ export default class Index extends React.Component {
 
   vibrate = e => {
     if (typeof window !== 'undefined') {
-      window.navigator.vibrate(200)
+      navigator.vibrate(200)
     }
     console.log('submit button click')
   }
