@@ -45,7 +45,7 @@ export const HabitPostTemplate = ({
           ''
           }
           <p className="contact-text">
-            Have a story or example of habit {habit} you would like to add? Let me know by completing the <Link to="/contact">form</Link> for access to the CMS.
+            Have a story or example of habit {habit} you would like to add? Let me know by completing the <Link to="/contact">form</Link> for access to the <a href="/admin/">CMS</a>.
           </p>
         </div>
       </div>
