@@ -21,7 +21,9 @@ While there are various technologies and tools available, this project is using:
 
 https://github.com/nyan-matt/seven-habits-gatsby-netlify
 
-Because content is usually co-located with source code in a git repository, it could be a challenge to get content authors onboarded with understanding git workflows and commands, however, there are tools like Netlify CMS that can be integrated  into your repository and expose content for editing / creation through a simple web interface.
+Because content is usually co-located with source code in a git repository, it could be a challenge to get content authors onboarded with understanding git workflows and commands, however, there are tools like Netlify CMS that can be integrated  into your repository and expose content for editing / creation through a simple web interface. Each collection type can be configured through a <a href="https://github.com/nyan-matt/seven-habits-gatsby-netlify/blob/master/static/admin/config.yml">yaml file</a> to generate a schema used to map data to the editor.
+
+
 
 For more information, see https://www.netlifycms.org/ 
 

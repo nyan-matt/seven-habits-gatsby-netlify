@@ -31,7 +31,7 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     const posts = result.data.allMarkdownRemark.edges
-    console.log(JSON.stringify(posts))
+    //console.log(JSON.stringify(posts))
     posts.forEach(edge => {
       const id = edge.node.id
       const habit = edge.node.frontmatter.habit
