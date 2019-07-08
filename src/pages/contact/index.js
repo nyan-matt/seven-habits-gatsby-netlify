@@ -17,11 +17,13 @@ export default class Index extends React.Component {
     this.setState({ [e.target.name]: e.target.value })
   }
 
-  vibrate = e => {
+  vibrate = () => {
     if (typeof window !== 'undefined') {
+      // this won't do anything unless device supports this api
       navigator.vibrate(200)
+      console.log("window and vibrate")
     }
-    console.log('submit button click')
+    
   }
 
   handleSubmit = e => {
