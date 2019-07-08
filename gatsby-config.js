@@ -21,6 +21,7 @@ module.exports = {
         icon: `${__dirname}/src/img/icon.png`,
       },
     },
+      'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-layout',
       options: {
