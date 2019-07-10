@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 class BlogRoll extends React.Component {
   render() {
@@ -12,31 +11,29 @@ class BlogRoll extends React.Component {
       <div className="columns is-multiline">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
+            <div className="column is-12 is-paddingless" key={post.id}>
               <article
-                className="blog-list-item tile is-child box notification">
+                className="blog-list-item" 
+              >
                 <header>
                   <p className="post-meta">
                     <Link
-                      className="title has-text-primary is-size-4"
+                      className="post-headline is-size-4"
                       to={post.fields.slug}
                     >
                       {post.frontmatter.title}
                     </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
+                    <span className="post-date is-size-7">{post.frontmatter.date}</span>
+                    <div class="tags has-addons">
+                      <span class="tag ">Habit</span>
+                      <span class="tag is-primary">{post.frontmatter.habit}</span>
+                    </div>
                   </p>
                 </header>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
+                  <p className="is-size-7"> 
+                    {post.excerpt}
+                  </p>
+                  <Link className="read-more is-size-7" to={post.fields.slug}>Read More</Link>
               </article>
             </div>
           ))}
@@ -63,7 +60,7 @@ export default () => (
         ) {
           edges {
             node {
-              excerpt(pruneLength: 400)
+              excerpt(pruneLength: 300)
               id
               fields {
                 slug
@@ -71,6 +68,7 @@ export default () => (
               frontmatter {
                 title
                 templateKey
+                habit
                 date(formatString: "MMMM DD, YYYY")
               }
             }

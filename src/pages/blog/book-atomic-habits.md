@@ -3,7 +3,7 @@ templateKey: blog-post
 habit: '07'
 title: Book - Atomic Habits
 description: This book is a good companion to Habit 7
-date: 2017-01-04T15:04:10.000Z
+date: 2019-07-06T15:04:10.000Z
 tags:
     - '07'
 ---

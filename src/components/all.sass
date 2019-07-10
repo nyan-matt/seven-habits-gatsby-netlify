@@ -183,20 +183,9 @@ label
     &:hover
       color: $green
 
-.content .taglist
-  list-style: none
-  margin-bottom: 0
-  margin-left: 0
-  margin-right: 1.5rem
-  margin-top: 1.5rem
-  display: flex
-  flex-wrap: wrap
-  justify-content: left
-  align-items: center
-  li
-    padding: 0 2rem 1rem 0
-    margin-bottom: 1.5rem
-    margin-top: 0
+
+
+
 
 // Helper Classes
 .full-width-image-container
@@ -280,14 +269,35 @@ $menu-label-color: $white-ter
     display: inline
 
 // blog roll
-.blog-list-item.is-featured
-  background-color: #d6400033;
+
+
+.blog-list-item 
+  height: 100%
+  margin: 16px 0
+  border-top: 1px solid $gray
+  
 .blog-list-item header
-  display: flex;
-  margin-bottom: 1em;
-.blog-list-item .featured-thumbnail
-  flex-basis: 35%;
-  margin: 0 1.5em 0 0;
+  display: flex
+  margin: 1em 0
+
+a.post-headline
+  color: $white
+  text-decoration: underline
+  &:hover
+    color: $green
+
+div.tags
+  margin-top: 10px
+  margin-bottom2: 10px
+
+span.post-date
+  display: block
+
+a.read-more
+  color: $white
+  &:hover
+    color: $green
+    text-decoration: underline
 
 
 @import "~bulma"
